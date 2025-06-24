@@ -7,6 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+app.use(cors({
+  origin: 'https://tests-platform.netlify.app',
+  credentials: true,
+}));
+
 // Import Routes
 const routes = require("./routes/routes");
 
